@@ -1,29 +1,58 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity, Alert  } from 'react-native';
 
 
-const AppProduct = (props) => {
-    console.log(props);
+const AppProduct = ({ product }) => {
+
   return (
-    <View>
-        <Text style={style.tittle}>{props.tittle}</Text>
-        <Text style={style.description}>{props.description}</Text>
-    </View>
+    <TouchableOpacity onPress={() =>
+        Alert.alert
+          (
+            "Alert Title",
+            "My Alert Msg",
+          )
+        }>
+        <View style={style.card}>
+            <Image style={style.img} source={{uri: product.image}}/>
+            <Text style={style.tittle}>{product.tittle}</Text>
+            <View style={style.row}>
+                <Text style={style.description}>{product.description}</Text>
+                <Text style={style.price}>Rp {product.price}</Text>
+            </View>
+        </View>
+    </TouchableOpacity>
   );
 }
 
 const style = StyleSheet.create({
-    tittle : {
+    card: {
+        padding: 20,
+        marginVertical: 10,
+        marginHorizontal: 20,
+        borderRadius : 20,
+        backgroundColor: '#ffffff'
+
+    },
+    img: {
+        height: 250,
+    },
+    row: { 
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        borderTopWidth: 2,
+    },
+    tittle: {
         fontSize : 30,
-        color : 'black',
+        color : '#004080',
         fontWeight : 'bold',
-        textAlign : 'center',
-        textTransform : 'uppercase'
     },
     description: {
         fontSize : 20,
-        color: 'red',
-        textAlign : 'center'
+        color: '#ff8000'
+    },
+    price: {
+        fontSize : 20,
+        color: '#ff0000',
     }
 });
 
