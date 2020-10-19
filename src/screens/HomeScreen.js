@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity onPress={() => console.log('awokwao')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Santri')}>
               <Image style={style.img} source={{uri : 'https://scontent.fsub9-1.fna.fbcdn.net/v/t1.0-9/p960x960/40901948_2154995611434081_5105080363764416512_o.jpg?_nc_cat=111&_nc_sid=85a577&_nc_ohc=VRFNCRgrU4EAX_bfT1D&_nc_ht=scontent.fsub9-1.fna&tp=6&oh=e0856e59617c10ed96d9532731142385&oe=5FB14368'}}/>
           </TouchableOpacity>
         </View>
