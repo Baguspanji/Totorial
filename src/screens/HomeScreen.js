@@ -6,8 +6,8 @@ const HomeScreen = ({ navigation }) => {
     return (
       <SafeAreaView style={style.container}>
         <View style={style.col} >
-          <TouchableOpacity onPress={() => navigation.navigate('Student')}>
-              <Text style={style.huruf} >Mahasiswa Informatika</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Interractive')}>
+              <Text style={style.huruf} >InterractiveScreen</Text>
           </TouchableOpacity>
         </View>
         <View>

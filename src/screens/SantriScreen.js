@@ -37,11 +37,11 @@ export default class SantriScreen extends React.Component
 
         const style = StyleSheet.create({
             container: {
-              flex: 1,
-              marginTop: 20,
-              backgroundColor: '#ffffff'
+                flex: 1,
+                marginTop: 20,
+                backgroundColor: '#ffffff'
             }
-          });
+        });
 
         let {dataSource, isLoading} = this.state;
         return(

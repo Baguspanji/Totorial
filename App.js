@@ -3,7 +3,7 @@ import { NavigationContainer, StackActions } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import ProductScreen from './src/screens/ProductScreen';
-import StudentScreen from './src/screens/StudentScreen';
+import InterractiveScreen from './src/screens/InterractiveScreen';
 import SantriScreen from './src/screens/SantriScreen';
 
 const Stack = createStackNavigator();
@@ -23,9 +23,8 @@ const MainApp = () => {
             options={{ title: 'Menu Makan'}}
             />
             <Stack.Screen
-            name="Student"
-            component={StudentScreen}
-            options={{ title: 'Data Mahasiswa'}}
+            name="Interractive"
+            component={InterractiveScreen}
             /><Stack.Screen
             name="Santri"
             component={SantriScreen}

@@ -36,13 +36,13 @@ const ProductScreen = ({navigation}) =>
     )
   };
   return ( //return ProductScreen
-   <SafeAreaView style={style.container}>
+    <SafeAreaView style={style.container}>
       <FlatList 
         data={productList}
         renderItem={productRender}
         keyExtractor={item => item.id}
       />
-   </SafeAreaView> 
+    </SafeAreaView> 
   )
   
   
